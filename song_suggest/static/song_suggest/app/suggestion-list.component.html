@@ -1,4 +1,26 @@
-<h2>Song Suggestions</h2>
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="text-center">Song Suggestions</h3>
+      </div>
 
-<suggestion *ngFor="let suggestion of suggestions" [suggestion]=suggestion>
-</suggestion>
+      <div class="panel-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="text-center">Title</th>
+              <th class="text-center">Artist</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let suggestion of suggestions">
+              <td class="text-center">{{suggestion.title}}</td>
+              <td class="text-center">{{suggestion.artist}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
