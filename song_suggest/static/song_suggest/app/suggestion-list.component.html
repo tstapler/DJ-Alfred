@@ -6,21 +6,22 @@
       </div>
 
       <div class="panel-body">
-        <table class="table">
+        <table class="table table-striped">
           <thead>
             <tr>
+             <th></th>
               <th class="text-center">Title</th>
               <th class="text-center">Artist</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let suggestion of suggestions">
+              <td></td>
               <td class="text-center">{{suggestion.title}}</td>
               <td class="text-center">{{suggestion.artist}}</td>
             </tr>
           </tbody>
         </table>
       </div>
-    </div>
   </div>
 </div>

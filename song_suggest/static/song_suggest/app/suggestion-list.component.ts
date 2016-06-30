@@ -18,11 +18,12 @@ export class SuggestionList implements OnInit {
       })
   }
 
-  subscription: Subscription;
+  subscription:any
 	suggestions: any
 
 	ngOnInit() {
 		this.suggestions = this.suggestionService.getSuggestions();
+//    this.onChangeTable(this.config);
 	}
 
 }
