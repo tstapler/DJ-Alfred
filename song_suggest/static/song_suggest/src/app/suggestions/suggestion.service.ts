@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { mock_suggestions } from './mock-suggestion';
-import { SuggestionItem } from './suggestion.component'
+import { SuggestionItem } from './suggestion'
 import { Subject } from 'rxjs/Subject';
 
 @Injectable()

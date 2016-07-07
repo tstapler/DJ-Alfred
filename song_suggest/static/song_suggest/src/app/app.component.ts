@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { SuggestionList } from './suggestion-list.component'
-import { SuggestionBox } from './suggestion_box.component'
-import { Navbar } from './navbar.component'
+import { SuggestionBox, SuggestionList } from './suggestions'
+import { Navbar } from './shared'
 import { ROUTER_DIRECTIVES } from '@angular/router'
 
 @Component({
+  moduleId: module.id,
 	selector: 'my-app',
 	directives: [ SuggestionList, SuggestionBox, Navbar],
-	templateUrl: './app/app.component.html'
+	templateUrl: './app.component.html'
 })
 export class AppComponent {
 }

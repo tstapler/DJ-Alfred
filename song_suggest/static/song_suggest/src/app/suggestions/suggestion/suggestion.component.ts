@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
 	selector:'suggestion',
-	templateUrl: './app/suggestion.component.html',
+	templateUrl: './suggestion.component.html',
 	})
-export class SuggestionItem {
+export class Suggestion {
 	@Input()
 	suggestion: any
 }
