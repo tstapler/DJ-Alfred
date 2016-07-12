@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
+import { routes } from '../../app.routes';
 
 @Component({
   moduleId: module.id,
@@ -9,5 +10,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
   })
 export class Navbar {
   routes: any
-
+  constructor(){
+    this.routes = routes
+  }
 }

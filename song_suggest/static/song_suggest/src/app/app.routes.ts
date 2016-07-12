@@ -1,10 +1,16 @@
-import { provideRouter, RouterConfig } from '@angular/router';
+import { provideRouter } from '@angular/router';
 
 import { Suggestions } from './suggestions'
+import { EventsComponent } from './events'
 
-export const routes: RouterConfig = [
-  { path: '', 
+export const routes: any = [
+  { path: 'suggestions', 
     component: Suggestions,
+    name: "Suggestions"
+  },
+  { path: '',
+    component: EventsComponent,
+    name: "Events"
   }
 ];
 
