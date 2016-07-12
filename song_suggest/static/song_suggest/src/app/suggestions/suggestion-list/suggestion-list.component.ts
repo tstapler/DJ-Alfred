@@ -1,14 +1,15 @@
 import { Component, ViewChildren, OnInit } from '@angular/core';
 
-import { SuggestionService } from './suggestion.service';
-import { SuggestionItem } from './suggestion.component';
+import { SuggestionService } from '../suggestion.service';
+import { Suggestion} from '../suggestion';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
+  moduleId: module.id,
 	selector: 'suggestion-list',
-	templateUrl: './app/suggestion-list.component.html',
+	templateUrl: './suggestion-list.component.html',
 	providers: [SuggestionService],
-	directives: [SuggestionItem]
+	directives: [Suggestion]
 })
 export class SuggestionList implements OnInit {
 	constructor(private suggestionService: SuggestionService) {
@@ -18,7 +19,7 @@ export class SuggestionList implements OnInit {
       })
   }
 
-  subscription: Subscription;
+  subscription:any
 	suggestions: any
 
 	ngOnInit() {
