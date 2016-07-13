@@ -2,8 +2,9 @@ import { Component, Output } from '@angular/core';
 import { SuggestionService } from '../suggestion.service';
 
 @Component({
+  moduleId: module.id,
   selector: 'suggestion-box',
-  template: './suggestion-box.component.html',
+  templateUrl: './suggestion-box.component.html',
   providers: [ SuggestionService ],
   outputs: ['counterChange:change']
 })

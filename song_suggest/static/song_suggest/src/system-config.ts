@@ -41,6 +41,9 @@ const barrels: string[] = [
   'app/suggestions/suggestion',
   'app/suggestions/suggestion-list',
   'app/suggestions/suggestion-box',
+  'app/events',
+  'app/events/event-list',
+  'app/events/event-calendar',
   /** @cli-barrel */
 ];
 
@@ -57,7 +60,7 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
+    'main': 'main.js',
   },
   packages: cliSystemConfigPackages
 });
