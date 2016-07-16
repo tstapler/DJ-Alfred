@@ -1,12 +1,13 @@
 from django.db import models
 
 class Song(models.Model):
-    added = models.DateTimeField(auto_now_add=True)
+    submission_time = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=100, blank=True, default='')
     artist = models.CharField(max_length=100, blank=True, default='')
+    votes = models.IntegerField(default=0)
 
     class Meta:
-        ordering = ('added',)
+        ordering = ('submission_time',)
 
 class Event(models.Model):
     date_time_start = models.DateTimeField()

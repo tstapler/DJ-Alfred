@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class SongSerializer(serializers.ModelSerializer):
     class Meta:
         model = Song
-        fields = ('id', 'title', 'added', 'artist')
+        fields = ('id', 'title', 'submission_time', 'artist', 'votes')
 
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
