@@ -14,7 +14,7 @@ import { EventComponent } from './event.component';
 
 describe('Component: Event', () => {
   it('should create an instance', () => {
-    let component = new EventComponent();
+    let component = new EventComponent('Name', 'Description', new Date, new Date);
     expect(component).toBeTruthy();
   });
 });

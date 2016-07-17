@@ -7,10 +7,39 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  '@angular2-material': 'vendor/@angular2-material',
+  'primeng': 'vendor/primeng',
+  'fullcalendar': 'vendor/fullcalendar/dist/fullcalendar.js',
+  'fullcalendar-css': 'vendor/fullcalendar/dist/fullcalendar.css',
+  'moment': 'vendor/moment/moment.js',
+  'jquery': 'vendor/jquery/dist/jquery.js',
 };
 
 /** User packages configuration. */
 const packages: any = {
+  '@angular2-material/core': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'core.js'
+  },
+  '@angular2-material/checkbox': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'checkbox.js'
+  },
+  'primeng': {
+  defaultExtension: 'js'
+  },
+  'fullcalendar': {
+  defaultExtension: 'js',
+  format: 'cjs'
+  },
+  'moment': {
+  format: 'cjs'
+  },
+  'jquery': {
+  format: 'cjs'
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -22,6 +51,7 @@ const barrels: string[] = [
   '@angular/core',
   '@angular/common',
   '@angular/compiler',
+  '@angular/forms',
   '@angular/http',
   '@angular/router',
   '@angular/platform-browser',
