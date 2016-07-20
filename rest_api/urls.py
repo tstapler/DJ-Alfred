@@ -6,6 +6,7 @@ from rest_api import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'songs', views.SongViewSet)
+router.register(r'playlists', views.PlaylistViewSet)
 router.register(r'events', views.EventViewSet)
 
 # Wire up our API using automatic URL routing.
