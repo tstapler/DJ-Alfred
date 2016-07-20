@@ -5,11 +5,25 @@ class Song(models.Model):
     title = models.CharField(max_length=100, blank=True, default='')
     artist = models.CharField(max_length=100, blank=True, default='')
     votes = models.IntegerField(default=0)
-
     class Meta:
         ordering = ('submission_time',)
 
+    def __unicode__(self):
+        return '%d: %s' % (self.id, self.title)
+
+class Playlist(models.Model):
+    songs = models.ManyToManyField(Song)
+    name = models.CharField(max_length=100, blank=True, default='')
+    owner = models.CharField(max_length=100, blank=True, default='')
+    created_date = models.DateTimeField(auto_now_add=True)
+    class Meta:
+        ordering = ('created_date',)
+
+    def __unicode__(self):
+        return '%d: %s' % (self.id, self.name)
+
 class Event(models.Model):
+    playlists = models.ManyToManyField(Playlist)
     date_time_start = models.DateTimeField()
     date_time_end = models.DateTimeField()
     name = models.CharField(max_length=100, blank=True, default='')
