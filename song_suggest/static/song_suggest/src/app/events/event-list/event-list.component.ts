@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { EventComponent } from './../event/event.component';
 
 @Component({
@@ -9,14 +9,11 @@ import { EventComponent } from './../event/event.component';
   directives: [ EventComponent ]
 })
 export class EventListComponent implements OnInit {
-  events: EventComponent[];
+  
+  @Input() events: any[];
 
   constructor() {}
 
   ngOnInit() {
-    this.events = []
-    for (var i = 0; i < 4; i++) {
-      this.events.push(new EventComponent("Event" + i, "Stuff", new Date, new Date));
-    } 
   } 
 }

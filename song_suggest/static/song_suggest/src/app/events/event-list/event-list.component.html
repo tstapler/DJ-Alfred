@@ -2,16 +2,21 @@
   <div class="row">
     <h2 class="text-center">Upcoming Gigs!</h2>
   </div>
+  <hr>
   <div *ngFor="let event of events" class="col-xs-4">
     <div class="panel panel-default ">
       <div class="panel-heading">
         <p class="panel-title text-center">
-          {{event.name}}
+          {{event.title}}
         </p>
       </div>
       <ul class="list-group">
-        <li class="list-group-item"><b>Start:</b> {{event.start | date: 'short'}}</li>
-        <li class="list-group-item"><b>End: </b>{{event.end | date: 'short'}}</li>
+        <li class="list-group-item"><p><b>Start:</b> <span class="text-center">{{event.start | date: 'short'}}</span></p></li>
+        <li class="list-group-item">
+          <p>
+            <b>End: </b><span *ngIf="event.end">{{ event.end | date: 'short'}}</span><span *ngIf="!event.end">N/A</span>
+          </p>
+        </li>
       </ul>
       <div class="panel-body">
         <div class="text-center">

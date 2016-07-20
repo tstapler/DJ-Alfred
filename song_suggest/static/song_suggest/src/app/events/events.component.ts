@@ -11,10 +11,44 @@ import { EventListComponent } from './event-list';
   directives: [ EventCalendarComponent, EventListComponent ]
 })
 export class EventsComponent implements OnInit {
+  events: any[];
 
-  constructor() {}
+  header: any;
 
-  ngOnInit() {
+  constructor() {
   }
 
+
+  ngOnInit() {
+
+    this.events = [
+            {
+                "title": "All Day Event",
+                "desc": "stuff",
+                "start": "2016-01-01",
+                "end": new Date
+            },
+            {
+                "title": "Long Event",
+                "desc": "stuff",
+                "start": "2016-01-07",
+                "end": "2016-01-10",
+            },
+            {
+                "title": "Repeating Event",
+                "desc": "stuff",
+                "start": "2016-01-09T16:00:00",
+            },
+            {
+                "title": "Repeating Event",
+                "desc": "stuff",
+                "start": "2016-01-16T16:00:00",
+            },
+            {
+                "title": "Conference",
+                "desc": "stuff",
+                "start": "2016-01-11",
+                "end": "2016-01-13"
+            }];
+  }
 }

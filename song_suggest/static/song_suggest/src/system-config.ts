@@ -10,9 +10,9 @@ const map: any = {
   '@angular2-material': 'vendor/@angular2-material',
   'primeng': 'vendor/primeng',
   'fullcalendar': 'vendor/fullcalendar/dist/fullcalendar.js',
-  'fullcalendar-css': 'vendor/fullcalendar/dist/fullcalendar.css',
   'moment': 'vendor/moment/moment.js',
   'jquery': 'vendor/jquery/dist/jquery.js',
+  'bootstrap': 'vendor/bootstrap/dist/js/bootstrap.js'
 };
 
 /** User packages configuration. */
@@ -38,6 +38,9 @@ const packages: any = {
   format: 'cjs'
   },
   'jquery': {
+  format: 'cjs'
+  },
+  'bootstrap':{
   format: 'cjs'
   }
 };
