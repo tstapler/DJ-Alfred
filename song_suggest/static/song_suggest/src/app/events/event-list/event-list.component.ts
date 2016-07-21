@@ -14,6 +14,16 @@ export class EventListComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-  } 
+  ngOnInit() {} 
+
+  createEvent(event) {
+    this.events.push(event);
+  }
+
+  deleteEvent(event) {
+    var i = this.events.indexOf(event);
+    if(i != -1) {
+      this.events.splice(i, 1);
+    }
+  }
 }

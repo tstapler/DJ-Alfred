@@ -3,11 +3,21 @@
     <h2 class="text-center">Upcoming Gigs!</h2>
   </div>
   <hr>
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <div class="panel panel-default">
+          <div class="panel-heading"><div class="panel-title text-center">Add your next Event!</div></div>
+          <div class="panel-body"></div>
+        </div>
+      </div>
+    </div>
+  <hr>
   <div *ngFor="let event of events" class="col-xs-4">
     <div class="panel panel-default ">
       <div class="panel-heading">
         <p class="panel-title text-center">
-          {{event.title}}
+          {{event.title}} 
+        <span (click)="deleteEvent(event)" class="glyphicon glyphicon-remove pull-right"></span>
         </p>
       </div>
       <ul class="list-group">
