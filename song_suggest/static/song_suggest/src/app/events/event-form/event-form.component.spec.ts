@@ -10,12 +10,11 @@ import {
   async, inject
 } from '@angular/core/testing';
 
-import { EventComponent } from './event.component';
-import { Event } from './event';
+import { EventFormComponent } from './event-form.component';
 
-describe('Component: Event', () => {
+describe('Component: EventForm', () => {
   it('should create an instance', () => {
-    let component = new EventComponent(new Event('Name', 'Description', new Date, new Date));
+    let component = new EventFormComponent();
     expect(component).toBeTruthy();
   });
 });

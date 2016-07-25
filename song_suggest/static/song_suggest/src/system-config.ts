@@ -12,7 +12,10 @@ const map: any = {
   'fullcalendar': 'vendor/fullcalendar/dist/fullcalendar.js',
   'moment': 'vendor/moment/moment.js',
   'jquery': 'vendor/jquery/dist/jquery.js',
-  'bootstrap': 'vendor/bootstrap/dist/js/bootstrap.js'
+  'jqueryui': 'vendor/jqueryui/jquery-ui.js',
+  'bootstrap': 'vendor/bootstrap/dist/js/bootstrap.js',
+  'ng2-bootstrap': 'vendor/ng2-bootstrap/bundles/ng2-bootstrap.js',
+  'ng2-datetime' : 'vendor/ng2-datetime'
 };
 
 /** User packages configuration. */
@@ -40,9 +43,18 @@ const packages: any = {
   'jquery': {
   format: 'cjs'
   },
+  'jqueryui': {
+  format: 'cjs'
+  },
   'bootstrap':{
   format: 'cjs'
-  }
+  },
+  'ng2-bootstrap': {
+  format: 'cjs'
+  },
+  'ng2-datetime': {
+  defaultExtension: 'js'
+  },
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -77,6 +89,8 @@ const barrels: string[] = [
   'app/events',
   'app/events/event-list',
   'app/events/event-calendar',
+  'app/events/hero-form',
+  'app/events/event-form',
   /** @cli-barrel */
 ];
 

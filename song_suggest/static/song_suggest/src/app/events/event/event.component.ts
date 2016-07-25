@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Event } from './../event/event';
 
 @Component({
   moduleId: module.id,
@@ -7,17 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event.component.css']
 })
 export class EventComponent implements OnInit {
-  name: String;
-  desc: String;
-  start: Date;
-  end: Date;
 
-  constructor(name: String, desc: String, start: Date, end: Date) {
-    this.name = name;
-    this.desc = desc;
-    this.start = start;
-    this.end = end;
-  }
+  constructor(
+    event: Event
+  ) {}
 
   ngOnInit() {
   }

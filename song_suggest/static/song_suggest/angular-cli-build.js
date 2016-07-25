@@ -24,7 +24,10 @@ module.exports = function(defaults) {
       'fullcalendar/dist/fullcalendar.+(js|css)',
       'moment/moment.js',
       'jquery/dist/jquery.js',
-      'bootstrap/dist/js/bootstrap.js'
+      'jqueryui/jquery-ui.+(js|css)'
+      'bootstrap/dist/js/bootstrap.js',
+      'ng2-bootstrap/bundles/ng2-bootstrap.js',
+      'ng2-datetime/**/*.+(js|js.map|css|ts)'
     ]
   });
 };

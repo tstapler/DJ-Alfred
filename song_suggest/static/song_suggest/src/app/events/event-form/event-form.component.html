@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title text-center">Add your next Event!</div>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" required [(ngModel)]="event.name" id="name">
+    </div>
+    <div class="form-group">
+      <label for="desc">Description</label>
+      <input type="text" class="form-control" required [(ngModel)]="event.desc" id="desc">
+    </div>
+    <div class="form-group">
+      <label for="start">Start Time</label>
+      <datetime  [(ngModel)]="event.start" id="start"></datetime>
+    </div>
+    <div class="form-group">
+      <label for="end">End Time</label>
+      <datetime [(ngModel)]="event.end" id="end"></datetime>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,13 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { EventComponent } from './../event/event.component';
+import { EventFormComponent } from './../event-form/event-form.component';
 
 @Component({
   moduleId: module.id,
   selector: 'event-list',
   templateUrl: 'event-list.component.html',
   styleUrls: ['event-list.component.css'],
-  directives: [ EventComponent ]
+  directives: [ EventComponent, EventFormComponent ]
 })
 export class EventListComponent implements OnInit {
   
