@@ -26,7 +26,7 @@ module.exports = function(defaults) {
       'jquery/dist/jquery.js',
       'jqueryui/jquery-ui.+(js|css)',
       'bootstrap/dist/js/bootstrap.js',
-      'ng2-bootstrap/bundles/ng2-bootstrap.js',
+      'ng2-bootstrap/**/*.+(js|js.map|css|ts)',
       'ng2-datetime/**/*.+(js|js.map|css|ts)'
     ]
   });

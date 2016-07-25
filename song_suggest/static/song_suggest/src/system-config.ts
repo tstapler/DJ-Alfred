@@ -14,7 +14,7 @@ const map: any = {
   'jquery': 'vendor/jquery/dist/jquery.js',
   'jqueryui': 'vendor/jqueryui/jquery-ui.js',
   'bootstrap': 'vendor/bootstrap/dist/js/bootstrap.js',
-  'ng2-bootstrap': 'vendor/ng2-bootstrap/bundles/ng2-bootstrap.js',
+  'ng2-bootstrap': 'vendor/ng2-bootstrap',
   'ng2-datetime' : 'vendor/ng2-datetime'
 };
 
