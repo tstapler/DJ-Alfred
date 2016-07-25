@@ -7,7 +7,8 @@ class Song(models.Model):
     votes = models.IntegerField(default=0)
     def __str__(self):
         return '%d: %s' % (self.id, self.title)
-
+    def __unicode__(self):
+        return '%d: %s' % (self.id, self.title)
     class Meta:
         ordering = ('submission_time',)
 
@@ -18,7 +19,8 @@ class Playlist(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return '%d: %s' % (self.id, self.name)
-
+    def __unicode__(self):
+        return '%d: %s' % (self.id, self.name)
     class Meta:
         ordering = ('created_date',)
 
@@ -32,6 +34,7 @@ class Event(models.Model):
     owner = models.CharField(max_length=100, blank=True, default='')
     def __str__(self):
         return '%d: %s' % (self.id, self.name)
-
+    def __unicode__(self):
+        return '%d: %s' % (self.id, self.name)
     class Meta:
         ordering = ('date_time_start',)
