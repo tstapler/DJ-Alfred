@@ -5,14 +5,10 @@ import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class SuggestionService {
-  suggestions:any[];
+  suggestions: any[] = mock_suggestions;
   private suggestionSource = new Subject();
 
   suggestions$ = this.suggestionSource.asObservable();
-
-  constructor() {
-    this.suggestions = mock_suggestions
-  }
 
 	getSuggestions () {
 	 return this.suggestions;

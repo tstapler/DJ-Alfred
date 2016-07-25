@@ -11,10 +11,11 @@ import {
 } from '@angular/core/testing';
 
 import { EventsComponent } from './events.component';
+import { EventService } from './event.service';
 
 describe('Component: Events', () => {
   it('should create an instance', () => {
-    let component = new EventsComponent();
+    let component = new EventsComponent(new EventService());
     expect(component).toBeTruthy();
   });
 });
