@@ -8,14 +8,11 @@ class SongSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'submission_time', 'artist', 'votes')
 
 class PlaylistSerializer(serializers.ModelSerializer):
-    songs = serializers.StringRelatedField(many=True) 
-
     class Meta:
         model = Playlist
         fields = ('id', 'created_date', 'name', 'owner', 'songs')
 
 class EventSerializer(serializers.ModelSerializer):
-    playlists = serializers.StringRelatedField(many=True)
     class Meta:
         model = Event
         fields = ('id', 'date_time_start', 'date_time_end', 'description',
