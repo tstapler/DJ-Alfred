@@ -4,7 +4,8 @@
       <div class="panel-heading">
         <p class="panel-title text-center">
           {{event.title}} 
-        <span (click)="deleteEvent(event)" class="glyphicon glyphicon-remove pull-right"></span>
+          <span (click)="editEvent(event)"class="glyphicon glyphicon-pencil pull-right"></span>
+          <span (click)="deleteEvent(event)" class="glyphicon glyphicon-remove pull-right"></span>
         </p>
       </div>
       <ul class="list-group">

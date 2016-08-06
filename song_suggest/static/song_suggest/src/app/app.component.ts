@@ -1,5 +1,6 @@
 import { Component, ViewContainerRef } from '@angular/core';
 import { SuggestionBox, SuggestionList } from './suggestions';
+import { EventService } from './events';
 import { Navbar } from './shared';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 
@@ -7,6 +8,7 @@ import { ROUTER_DIRECTIVES, Router } from '@angular/router';
   moduleId: module.id,
 	selector: 'my-app',
 	directives: [ Navbar, ROUTER_DIRECTIVES ],
+  providers: [ EventService ],
 	templateUrl: './app.component.html'
 })
 export class AppComponent{

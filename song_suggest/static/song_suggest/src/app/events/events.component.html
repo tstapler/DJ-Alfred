@@ -5,11 +5,12 @@
 <hr>
 <div class="row">
   <div class="col-xs-6 col-xs-offset-3 text-center">
-    <button class="btn btn-primary btn-lrg" (click)="lgModal.show()">Create New Event</button>
+    <button class="btn btn-primary btn-lrg" (click)="createNewEvent(); lgModal.show()">Create New Event</button>
   </div>
+
 </div>
 <hr>
-<event-list [events]="events"></event-list>
+<event-list [events]="events" [modal]="lgModal"></event-list>
 
 <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -21,7 +22,7 @@
         <h4 class="modal-title text-center">Event</h4>
       </div>
       <div class="modal-body">
-        <event-form></event-form>
+        <event-form [modal]="lgModal" [create_new]="create_new"></event-form>
       </div>
     </div>
   </div>
