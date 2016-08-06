@@ -36,6 +36,7 @@ export class EventFormComponent implements OnInit {
     if(this.create_new) {
     this.eventService.addEvent(this.event);
     this.event = new Event('', '', new Date, new Date);
+    this.eventService.setSelectedEvent(this.event);
     this.create_new = false;
     } else {
     this.eventService.updateEvent(this.event)

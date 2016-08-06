@@ -1,2 +1,2 @@
-export { EventComponent } from './event.component';
-export { Event } from './event';
+export  *  from './event.component';
+export  *  from './event';

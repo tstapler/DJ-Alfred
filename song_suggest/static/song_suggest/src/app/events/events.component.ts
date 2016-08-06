@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MODAL_DIRECTIVES, BS_VIEW_PROVIDERS } from 'ng2-bootstrap/ng2-bootstrap';
 import { CORE_DIRECTIVES } from '@angular/common';
-import { EventComponent, Event } from './event';
+import { EventComponent } from './event/event.component';
+import { Event } from './event/event';
 import { EventCalendarComponent } from './event-calendar';
 import { EventListComponent } from './event-list';
 import { EventService } from './event.service';
@@ -45,6 +46,7 @@ export class EventsComponent implements OnInit {
   
   createNewEvent() {
     this.create_new = true;
+    this.eventService.setSelectedEvent(new Event('', '', new Date, new Date));
   }
 
 
