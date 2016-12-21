@@ -15,16 +15,9 @@ export class EventsComponent implements OnInit {
   current_event: any;
   events: any;
   events_subscription: any;
-  current_event_subscription: any;
   create_new: boolean = false;
 
   constructor(private eventService: EventService, private modalService: NgbModal) {
-    this.current_event_subscription = this.eventService.current_event$.subscribe(
-      event => {
-        this.current_event = event;
-      },
-      err => console.error(err)
-    );
     this.events_subscription = this.eventService.events$.subscribe(
       events => {
         this.events = events;
