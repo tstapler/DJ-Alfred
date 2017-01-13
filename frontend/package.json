@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "2.4.1",
     "@angular/router": "3.4.1",
     "@angular/upgrade": "2.4.1",
-    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.15",
+    "@ng-bootstrap/ng-bootstrap": "1.0.0-alpha.17",
     "@swimlane/ngx-datatable": "^4.1.0",
     "angular-calendar": "^0.5.0",
     "core-js": "^2.4.1",
@@ -32,7 +32,7 @@
     "rxjs": "^5.0.0-beta.12",
     "ts-helpers": "^1.1.1",
     "tslint": "^4.1.1",
-    "zone.js": "^0.6.23"
+    "zone.js": "^0.7.2"
   },
   "devDependencies": {
     "@angular/compiler-cli": "2.2.3",
