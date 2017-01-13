@@ -1,1 +1,6 @@
-<!-- <p-calendar [(ngModel)]="events"></p-calendar> -->
+<mwl-calendar-month-view 
+  [events]="events" 
+  [viewDate]="viewDate"
+  [activeDayIsOpen]="activeDayIsOpen"
+  (dayClicked)="dayClicked($event.day)"
+  (eventTimesChanged)="eventTimesChanged($event)"></mwl-calendar-month-view>

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { CalendarModule } from 'primeng/components/calendar/calendar';
+import { CalendarModule } from 'angular-calendar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { EventsComponent } from './events.component';
@@ -17,7 +17,7 @@ import { EventService } from './event.service';
     CommonModule,
     FormsModule,
     NgbModule,
-    CalendarModule,
+    CalendarModule.forRoot(),
   ],
   declarations: [
     EventComponent,
@@ -30,7 +30,7 @@ import { EventService } from './event.service';
   EventService,
  ],
  entryComponents: [
-   EventFormComponent
+   EventFormComponent,
  ]
 })
 export class EventsModule { }
