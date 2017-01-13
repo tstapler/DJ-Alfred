@@ -18,13 +18,17 @@ RUN easy_install pip
 RUN pip install uwsgi
 
 
-COPY backend/requirements.txt /home/docker/code/backend/
-RUN pip install -r /home/docker/code/backend/requirements.txt
+COPY backend/requirements.txt /backend/
+RUN pip install -r /backend/requirements.txt
 
+# Turn off the default nginx daemon
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-COPY nginx-app.conf /etc/nginx/sites-available/default
-COPY supervisor-app.conf /etc/supervisor/conf.d/
-COPY uwsgi.ini /home/docker/code/
+
+COPY backend/nginx-app.conf /etc/nginx/sites-available/default
+COPY backend/supervisor-app.conf /etc/supervisor/conf.d/
+COPY backend/ /backend
+
+COPY frontend/dist /frontend/dist
 
 EXPOSE 80
-CMD ["supervisord", "-n"]
+CMD ["/backend/run.sh"]
