@@ -19,9 +19,7 @@ export class SuggestionListComponent implements OnInit {
       });
   }
 
-
   ngOnInit() {
     this.suggestions = this.suggestionService.getSuggestions();
   }
-
 }

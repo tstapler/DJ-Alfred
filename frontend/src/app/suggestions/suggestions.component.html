@@ -1,2 +1,10 @@
-<suggestion-box (addSuggestion)=newSuggestion($event)></suggestion-box>
-<suggestion-list></suggestion-list>
+<div class="row flex-items-xs-center">
+  <div class="col-xs-6">
+    <suggestion-box (addSuggestion)=newSuggestion($event)></suggestion-box>
+  </div>
+</div>
+<div class="row flex-items-xs-center">
+  <div class="col-xs-10">
+    <ngx-datatable class="material" [columns]="columns" [rows]="suggestions"></ngx-datatable>
+  </div>
+</div>
