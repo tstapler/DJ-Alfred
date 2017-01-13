@@ -18,7 +18,10 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.css",
+	"../node_modules/angular-calendar/dist/css/angular-calendar.css",
+	"../node_modules/@swimlane/ngx-datatable/release/datatable.css",
+	"../node_modules/@swimlane/ngx-datatable/release/material.css"
       ],
       "scripts": [],
       "environments": {

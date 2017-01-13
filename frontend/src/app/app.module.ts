@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
+import { CalendarModule } from 'angular-calendar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
@@ -27,6 +28,7 @@ import { SuggestionsModule } from './suggestions';
     SuggestionsModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(routes),
+    CalendarModule.forRoot(),
   ],
   bootstrap: [AppComponent]
 })
