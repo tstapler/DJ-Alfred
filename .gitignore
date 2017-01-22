@@ -82,6 +82,18 @@ celerybeat-schedule
 venv/
 ENV/
 
+#Spring Backend stuff
+.idea/
+*.iml
+*.iws
+
+log/
+target/
+
+.classpath
+.project
+.settings/
+
 # sqlite
 *.sqlite3
 
