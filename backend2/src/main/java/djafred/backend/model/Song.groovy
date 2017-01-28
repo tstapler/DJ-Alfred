@@ -1,18 +1,19 @@
 package djafred.backend.model
 
-import org.hibernate.mapping.OneToMany
-
 import javax.persistence.Column
 import javax.persistence.Entity
+import javax.persistence.Table
 
 @Entity
-class PlayList {
+@Table
+class Song {
     @Column
     String name
 
     @Column
-    String createdBy
+    String albumn
 
     @Column
-    List<Song> songs
+    String artist
+
 }
