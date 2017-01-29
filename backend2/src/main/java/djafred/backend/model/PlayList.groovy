@@ -8,7 +8,7 @@ import javax.persistence.Id
 import javax.persistence.OneToMany
 
 @Entity
-class PlayList implements Serializable {
+class Playlist implements Serializable {
 
     @Id
     @GeneratedValue

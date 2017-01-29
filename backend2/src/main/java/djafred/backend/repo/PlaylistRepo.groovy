@@ -1,8 +1,8 @@
 package djafred.backend.repo
 
-import djafred.backend.model.PlayList
+import djafred.backend.model.Playlist
 import org.springframework.data.repository.CrudRepository
 
 
-interface PlaylistRepo extends CrudRepository<PlayList, Integer> {
+interface PlaylistRepo extends CrudRepository<Playlist, Integer> {
 }
