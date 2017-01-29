@@ -2,18 +2,28 @@ package djafred.backend.model
 
 import javax.persistence.Column
 import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.Id
+import javax.persistence.ManyToOne
 import javax.persistence.Table
 
 @Entity
 @Table
 class Song implements Serializable {
-    @Column
-    String name
+    @Id
+    @GeneratedValue
+    private Integer id
 
     @Column
-    String albumn
+    String title
+
+    @Column
+    String album
 
     @Column
     String artist
+
+    @ManyToOne
+    private Playlist playlist
 
 }

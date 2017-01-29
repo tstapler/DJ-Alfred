@@ -5,4 +5,5 @@ import org.springframework.data.repository.CrudRepository
 
 
 interface PlaylistRepo extends CrudRepository<Playlist, Integer> {
+    Playlist findByName(String name)
 }
