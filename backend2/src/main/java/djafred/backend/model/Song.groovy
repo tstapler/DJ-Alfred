@@ -6,7 +6,7 @@ import javax.persistence.Table
 
 @Entity
 @Table
-class Song {
+class Song implements Serializable {
     @Column
     String name
 

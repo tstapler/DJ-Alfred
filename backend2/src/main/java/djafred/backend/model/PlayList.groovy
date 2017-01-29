@@ -1,18 +1,25 @@
 package djafred.backend.model
 
-import org.hibernate.mapping.OneToMany
 
 import javax.persistence.Column
 import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.Id
+import javax.persistence.OneToMany
 
 @Entity
-class PlayList {
+class PlayList implements Serializable {
+
+    @Id
+    @GeneratedValue
+    private Integer id
+
     @Column
     String name
 
     @Column
     String createdBy
 
-    @Column
+    @OneToMany
     List<Song> songs
 }
