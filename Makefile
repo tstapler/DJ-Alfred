@@ -11,8 +11,8 @@ else
 	DOCKER = sudo docker
 endif
 
-NPM = npm --prefix frontend 
-DJANGO = python backend/manage.py
+NPM = npm --prefix frontend
+MAVEN = mvn
 
 all:
 	@echo "Please select an action"
@@ -23,12 +23,14 @@ build: build-frontend
 build-frontend:
 	$(NPM) run build
 
+build-backend:
+	$(MAVEN) install -f backend/pom.xml
+
 init:
 	$(NPM) install
-	pip install -r backend/requirements.txt
-	$(DJANGO) collectstatic
+	$(MAVEN) install -f backend/pom.xml
 
-RUN = $(DOCKER) run --rm -it -p 8001:80 --name $(IMAGE_NAME) 
+RUN = $(DOCKER) run --rm -it -p 8001:80 --name $(IMAGE_NAME)
 
 # Run the containerized application
 run:
@@ -38,9 +40,9 @@ run:
 run-dev:
 	$(RUN) -v $(CWD)/frontend:/frontend -v $(CWD)/backend:/backend $(IMAGE_TAG):latest
 
-# Run Django locally
+# Run java backend locally
 run-backend:
-	backend/dev/start_dev_server.sh
+	java -jar backend/target/dj-afred-backend-0.0.1.jar
 
 # Run the angular 2 webpack dev server
 run-frontend:
