@@ -45,7 +45,8 @@ $ make run-frontend
 For more specific instructions developing the frontend see its [readme](frontend/README.md).
 
 ### Back End
-To run the backend using the Django development server
+
+To run the backend jar file
 
 ```shell
 $ make run-backend
