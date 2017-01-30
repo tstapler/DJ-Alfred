@@ -9,16 +9,7 @@ A tool to help mobile DJs take their services to the next level.
 **System Dependencies**:
  - `docker`
  - `npm/node`
- - `python 2.7/3.*`
-
-To get started after cloning the repo and installing system dependencies create a python virtualenv and enter it
-
-```shell
-$ pip install virtualenv
-$ virtualenv env
-$ source env/bin/activate
-```
-
+ - `maven3/jdk1.8`
 First, install dependencies
 
 ```shell
@@ -44,7 +35,7 @@ Happy Hacking!
 
 ### Front End
 
-To serve the frontend using the autoreloading development server built into the `angular-cli` 
+To serve the frontend using the autoreloading development server built into the `angular-cli`
 
 ```shell
 $ make run-frontend

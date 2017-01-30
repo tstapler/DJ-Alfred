@@ -17,7 +17,9 @@ MAVEN = mvn
 all:
 	@echo "Please select an action"
 
-build: build-frontend
+build:
+	build-frontend
+	build-backend
 	$(DOCKER) build -t $(IMAGE_TAG):latest ./
 
 build-frontend:
@@ -28,7 +30,7 @@ build-backend:
 
 init:
 	$(NPM) install
-	$(MAVEN) install -f backend/pom.xml
+	$(MAVEN) compile -f backend/pom.xml
 
 RUN = $(DOCKER) run --rm -it -p 8001:80 --name $(IMAGE_NAME)
 
