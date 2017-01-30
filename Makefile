@@ -17,8 +17,7 @@ MAVEN = mvn
 all:
 	@echo "Please select an action"
 
-build:
-	build-frontend
+build: build-frontend
 	build-backend
 	$(DOCKER) build -t $(IMAGE_TAG):latest ./
 
