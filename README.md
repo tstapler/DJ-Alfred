@@ -10,6 +10,7 @@ A tool to help mobile DJs take their services to the next level.
  - `docker`
  - `npm/node`
  - `maven3/jdk1.8`
+ 
 First, install dependencies
 
 ```shell
