@@ -1,26 +1,29 @@
 package djafred.backend.model
 
-
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.Id
-import javax.persistence.OneToMany
 import javax.persistence.Table
-import javax.persistence.Transient
 
 @Entity
 @Table
-class Playlist implements Serializable {
+class Event {
 
     @Id
     @GeneratedValue
     private Integer id
 
     @Column
-    String name
+    String title
 
     @Column
-    String createdBy
+    String desc
+
+    @Column
+    Date start
+
+    @Column
+    Date end
 
 }

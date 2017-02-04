@@ -20,6 +20,6 @@ class PlaylistService {
     }
 
     long total() {
-        PlaylistRepo.count()
+        playlistRepo.count()
     }
 }

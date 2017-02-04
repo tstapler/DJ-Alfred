@@ -18,14 +18,11 @@ all:
 	@echo "Please select an action"
 
 build: build-frontend
-	build-backend
+	$(MAVEN) package -f backend/pom.xml
 	$(DOCKER) build -t $(IMAGE_TAG):latest ./
 
 build-frontend:
 	$(NPM) run build
-
-build-backend:
-	$(MAVEN) install -f backend/pom.xml
 
 init:
 	$(NPM) install
