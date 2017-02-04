@@ -9,7 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application implements CommandLineRunner{
+public class Application implements CommandLineRunner {
 
 
     @Autowired
@@ -27,17 +27,24 @@ public class Application implements CommandLineRunner{
 
     @Override
     public void run(String... strings) throws Exception {
-        playlistService.createPlaylist("CountDown", "Chris")
+        createInitialEvents()
+        createInitialPlaylists()
+    }
+
+    void createInitialEvents() {
         eventService.createEvent("All day event ", "stuff",
                 new Date().parse("yyy-mm-dd", "2016-01-01"), new Date())
         eventService.createEvent("Long Event", "stuff",
                 new Date().parse("yyy-mm-dd", "2016-01-07"),
                 new Date().parse("yyy-mm-dd", "2016-01-10"))
         eventService.createEvent("Repeating Event", "stuffs", new Date().parse("yyy-mm-dd", "2016-01-09"),
-                new Date().parse("yyy-mm-dd","2016-01-09"))
+                new Date().parse("yyy-mm-dd", "2016-01-09"))
         eventService.createEvent("Conference", "stuff", new Date().parse("yyy-mm-dd", "2016-01-11"),
                 new Date().parse("yyy-mm-dd", "2016-01-13"))
+    }
 
+    void createInitialPlaylists() {
+        playlistService.createPlaylist("CountDown", "Chris")
     }
 }
 
