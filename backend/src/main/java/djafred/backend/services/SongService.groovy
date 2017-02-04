@@ -17,9 +17,9 @@ class SongService {
     PlaylistRepo playlistRepo
 
     Song createSong(String title, String artist, String album, String playlistName){
-        Playlist playlist = playlistRepo.findByName(playlistRepo)
+        Playlist playlist = playlistRepo.findByName(playlistName)
         if(playlist == null){
-            throw new RuntimeException("Playlist does not exist: " + playlistName)
+            throw new RuntimeException("Playlist does not t exist: " + playlistName)
         }
         return songRepo.save(new Song(title: title, artist: artist,
                 album: album, playlist: playlist))
