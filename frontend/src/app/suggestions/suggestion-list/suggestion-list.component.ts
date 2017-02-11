@@ -1,7 +1,7 @@
 import { Component, ViewChildren, OnInit } from '@angular/core';
-
+import { Observable } from 'rxjs/Observable';
 import { SuggestionService } from '../suggestion.service';
-import { Subscription } from 'rxjs/Subscription';
+import {Suggestion} from "../suggestion";
 
 @Component({
   selector: 'suggestion-list',
@@ -9,17 +9,20 @@ import { Subscription } from 'rxjs/Subscription';
   providers: [SuggestionService],
 })
 export class SuggestionListComponent implements OnInit {
-  subscription: any;
-  suggestions: any;
+  suggestions: Suggestion[];
 
-  constructor(private suggestionService: SuggestionService) {
-    this.subscription = suggestionService.suggestions$.subscribe(
-      suggestions => {
-        this.suggestions = suggestions;
-      });
-  }
+  constructor(private suggestionService: SuggestionService) {}
 
   ngOnInit() {
-    this.suggestions = this.suggestionService.getSuggestions();
+    this.loadSuggestions();
+  }
+
+  loadSuggestions() {
+    this.suggestionService.getSuggestions().subscribe(
+        suggestions => this.suggestions = suggestions,
+        err => {
+          console.log(err);
+        }
+      )
   }
 }

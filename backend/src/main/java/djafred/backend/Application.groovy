@@ -2,14 +2,19 @@ package djafred.backend
 
 import djafred.backend.services.EventService;
 import djafred.backend.services.PlaylistService;
-import djafred.backend.services.SongService;
+import djafred.backend.services.SongService
+import djafred.backend.services.SongSuggestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.context.annotation.Bean
+import org.springframework.web.servlet.config.annotation.CorsRegistry
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @SpringBootApplication
-public class Application implements CommandLineRunner {
+class Application implements CommandLineRunner {
 
 
     @Autowired
@@ -21,14 +26,18 @@ public class Application implements CommandLineRunner {
     @Autowired
     private EventService eventService
 
-    public static void main(String[] args) {
+    @Autowired
+    private SongSuggestionService songSuggestionService
+
+    static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
 
     @Override
-    public void run(String... strings) throws Exception {
+    void run(String... strings) throws Exception {
         createInitialEvents()
         createInitialPlaylists()
+        createInitialSongSuggestions()
     }
 
     void createInitialEvents() {
@@ -45,6 +54,11 @@ public class Application implements CommandLineRunner {
 
     void createInitialPlaylists() {
         playlistService.createPlaylist("CountDown", "Chris")
+    }
+
+    void createInitialSongSuggestions() {
+        songSuggestionService.createSongSuggestion("Santeria", "Sublime")
+        songSuggestionService.createSongSuggestion("Louie Armstrong", "What a wonderful world")
     }
 }
 

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpModule } from '@angular/http';
+import {HttpModule, JsonpModule} from '@angular/http';
 
 import { CalendarModule } from 'angular-calendar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -24,6 +24,7 @@ import { SuggestionsModule } from './suggestions';
     BrowserModule,
     FormsModule,
     HttpModule,
+    JsonpModule,
     EventsModule,
     SuggestionsModule,
     NgbModule.forRoot(),

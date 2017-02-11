@@ -16,5 +16,7 @@ class SongSuggestion {
     @Column
     String title
 
-    @Column artist
+    @Column
+    String artist
 }
+

@@ -14,7 +14,7 @@ class SongSuggestionService {
     @Autowired
     SongSuggestionRepo songSuggestionRepo
 
-    SongSuggestion createSong(String title, String artist){
+    SongSuggestion createSongSuggestion(String title, String artist){
         return songSuggestionRepo.save(new SongSuggestion(title: title, artist: artist))
     }
 

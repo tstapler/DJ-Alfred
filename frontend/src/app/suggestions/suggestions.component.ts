@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { Suggestion } from './suggestion';
 import { SuggestionService } from './suggestion.service';
-import { mock_suggestions } from './mock-suggestion';
 
 @Component({
   selector: 'suggestions',
@@ -11,18 +10,22 @@ import { mock_suggestions } from './mock-suggestion';
 export class SuggestionsComponent implements OnInit {
   suggestions: Suggestion[] = [];
   columns: any = [{name:'Title'},{name:'Artist'}];
-  subscription: any;
 
-  constructor(private suggestionService: SuggestionService) {
-    this.subscription = this.suggestionService.suggestions$.subscribe(
-      (suggestions: Suggestion[]) => {
-        this.suggestions = suggestions;
-      },
-      err => console.error(err)
-    );
-  }
+  constructor(private suggestionService: SuggestionService) {}
 
   ngOnInit() {
-    this.suggestions = this.suggestionService.getSuggestions();
+    this.loadSuggestions();
+  }
+
+  loadSuggestions() {
+    this.suggestionService.getSuggestions().subscribe(
+        suggestions => this.suggestions = suggestions,
+        err => {
+          console.log(err);
+        }
+      )
+  }
+  addedSuggestion(event): void {
+    this.suggestions.push(event);
   }
 }

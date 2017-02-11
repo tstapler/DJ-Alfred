@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import {HttpModule, JsonpModule} from "@angular/http";
 
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
@@ -14,6 +15,8 @@ import { SuggestionService } from './suggestion.service';
     CommonModule,
     FormsModule,
     NgxDatatableModule,
+    HttpModule,
+    JsonpModule
   ],
   declarations: [
     SuggestionsComponent,
